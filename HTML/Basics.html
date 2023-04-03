@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <!-- To Add Favicon -->
+    <link rel="icon" type="image/x-icon" href="" />
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: aqua;
+      }
+      td {
+        background-color: chartreuse;
+        text-align: center;
+      }
+      h2 {
+        padding-left: 20%;
+      }
+      #space {
+        margin-top: 10%;
+        width: 50%;
+        height: 100px;
+      }
+      * {
+  box-sizing: border-box;
+}
+
+      header {
+        padding: 30px;
+        background-color: rgb(255, 208, 127);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+  
+      nav {
+        float: left;
+        background-color: aqua;
+        width: 30%;
+        min-height: 30rem;
+        padding: 20px;
+      }
+      nav,ul{
+        list-style-type: none;
+        padding: 0%;
+        padding-left: 10px;
+      }
+    article {
+      float: right;
+      padding: 30px;
+        background-color:darkolivegreen;
+        width: 70%;
+        min-height: 30rem;
+      }
+      section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+     
+      footer{
+        background-color: darkgray;
+        text-align: center;
+        padding-top:10px ;
+        color: white;
+        padding: 20px;
+      }
+
+      @media(max-width:700px){
+        nav,article{
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Basics Of HTML</h2>
+    <br />
+    <b>Bold Text</b><br />
+    <strong>Important text</strong><br />
+    <i>Italic</i>
+
+    <h1 style="color: turquoise">HTML quotation and Citation Elements</h1>
+    <p style="border: 2px solid green">Here is a quote from website:</p>
+    <blockquote cite="gullyjunction.com" style="background-color: tomato">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum facilis
+      quaerat temporibus?
+      <q>Totam possimus harum perferendis magni nihil sint tenetur cumque</q>,
+      iure distinctio id laborum iusto maiores doloribus. Ipsum, error.
+    </blockquote>
+
+    <h1 style="color: blueviolet">Links in HTML</h1>
+    <a href="https://gullyjunction.com/" target="_blank">
+      Visit My Brother's Website</a
+    >
+    <h2>Image as a link</h2>
+    <a href="https://gullyjunction.com/" target="_blank">
+      <img src="" alt="Some Img" style="width: auto; height: auto" />
+    </a>
+    <br /><br />
+    <h2>Lists</h2>
+    <ol>
+      <li>Tea</li>
+      <li>coffee</li>
+      <li>milk</li>
+    </ol>
+    <ul>
+      <li>Tea</li>
+      <li>coffee</li>
+      <li>milk</li>
+    </ul>
+
+    <h2>Iframe</h2>
+    <iframe
+      src="https://gullyjunction.com/"
+      frameborder="2px"
+      height="400px"
+      width="200px"
+    ></iframe>
+
+    <h2>JS in HTML</h2>
+    <p id="demo"></p>
+
+    <h2>Table</h2>
+    <table style="width: 50%">
+      <tr>
+        <th>Name</th>
+        <th style="width: 10%">Salary</th>
+        <th>City</th>
+        <th>age</th>
+      </tr>
+      <tr>
+        <td>Pete</td>
+        <td>200</td>
+        <td>Dharavi</td>
+        <td>69</td>
+      </tr>
+      <tr>
+        <td>Devine</td>
+        <td>150</td>
+        <td>delhi</td>
+        <td>33</td>
+      </tr>
+      <tr>
+        <td>Stan</td>
+        <td>002</td>
+        <td>Pata Nahi</td>
+        <td>69</td>
+      </tr>
+    </table>
+
+
+<h1 style="text-align: center;">LAYOUT</h1>
+    <header>
+      Header
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li>Delhi</li>
+          <li>Mumbai</li>
+          <li>Varanasi</li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Delhi</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          aliquam voluptate atque at dolorum vitae nobis temporibus maiores
+          beatae! Obcaecati omnis consectetur blanditiis porro, provident
+          praesentium velit molestias nam neque.
+        </p>
+      </article>
+    </section>
+    <footer>footer</footer>
+
+    <h1 style="text-transform: uppercase; text-align: center;">forms</h1>
+
+
+    <form name="myform" action="#" method = "post"onsubmit="return validateForm()">
+      Name: <input type="text" name="name"><br>
+      Password: <input type="password" name="password"><br>
+      <input type="submit" value="Register">
+    </form>
+
+    <script>
+      function validateForm(){
+      var name = document.myform.name.value;
+      var pass = document.myform.password.value;
+
+      if(name == ""||name==null){
+        alert("Name can't be blank");
+        return false;
+      }
+      else if(pass.length<6){
+        alert("Password must be atleast 6 characters long.")
+        return false;
+  
+      }
+      }
+    </script>
+
+  </body>
+</html>
